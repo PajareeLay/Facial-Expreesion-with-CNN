@@ -7,6 +7,10 @@ import matplotlib.pyplot as plt
 
 
 #prepare database
+
+#kaggle competitions download -c challenges-in-representation-learning-facial-expression-recognition-challenge
+#https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data
+
 path = "D:\Chula\Project\Lab\kaggle\input\challenges-in-representation-learning-facial-expression-recognition-challenge\icml_face_data.csv"
 data = pd.read_csv(path)
 
