@@ -29,6 +29,18 @@ X_train, y_train = parse_data(data[data[" Usage"] == "Training"])
 X_val, y_val = parse_data(data[data[" Usage"] == "PrivateTest"])
 X_test, y_test = parse_data(data[data[" Usage"] == "PublicTest"])
 
+#Augmentation
+
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+datagen = ImageDataGenerator(
+rotation_range=0.05,  #Randomly rotate images in the range
+zoom_range = 0.2, # Randomly zoom image
+width_shift_range=0.1,  #Randomly shift images horizontally
+height_shift_range=0.1,  #Randomly shift images vertically
+shear_range=0.05 #Randomly shear images
+)
+datagen.fit(X_train)
+
 # Building a CNN model
 # Conv#1> Pool#1 > Conv#2 > Pool#2 > Conv#3 > Pool#3 > FC
 
