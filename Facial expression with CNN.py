@@ -17,7 +17,7 @@ from tensorflow.keras.layers import Dense, Activation, Conv2D, MaxPool2D, Flatte
 #prepare database
 path = "D:\Chula\Project\Lab\kaggle\input\challenges-in-representation-learning-facial-expression-recognition-challenge\icml_face_data.csv"
 data = pd.read_csv(path)
-
+emotion = {0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sad', 5: 'Surprise', 6: 'Neutral'}
 
 # In[2]:
 
